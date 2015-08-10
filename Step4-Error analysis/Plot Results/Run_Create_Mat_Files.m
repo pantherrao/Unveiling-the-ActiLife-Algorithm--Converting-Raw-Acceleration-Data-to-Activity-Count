@@ -18,7 +18,7 @@ for loop = 1:length(filename1)
    [YACount,XACount,ZACount,Steps1,Lux1,InclinometerOff,InclinometerStanding,InclinometerSitting,InclinometerLying] = Fun_Read_Activity_Count_From_Actilife(filename);
 
    %% --------raw acceleration data loading------------------
-   tempfilename2 = strcat(filename2{loop}); 
+   tempfilename2 = strcat(filename2{loop},'.csv'); 
    load_path = strcat(fileparts(pwd),'\Real Raw Acceleration Data','\',tempfilename2);
    [xAcc,yAcc,zAcc] = Fun_Read_Raw_Acceleration_Data(load_path);
    %% ---Converting raw data to activity counts-------------------
